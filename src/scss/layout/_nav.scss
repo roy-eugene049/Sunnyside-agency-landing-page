@@ -1,0 +1,144 @@
+@use 'sass:color';
+@use '../base';
+
+.nav {
+	position: relative;
+	padding: 2rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.menu__btn {
+	background-color: inherit;
+	border: none;
+	transition: all 1s ease-out;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus:focus-visible, &:hover {
+		outline: max(1px, 0.1em) dashed currentColor;
+		outline-offset: 0.25em;
+	}
+}
+
+.nav__list {
+	padding: 3.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	position: absolute;
+	background-color: white;
+	width: 84%;
+	left: 50%;
+	margin-left: -42%;
+	top: 5.5rem;
+	z-index: 5;
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: -24px;
+		right: 0;
+		width: 0;
+		height: 0;		
+		border: 24px solid transparent;		
+		border-right: 24px solid white;
+	}
+}
+
+.nav__list__item {
+	text-align: center;
+	padding-bottom: 0.5rem;
+}
+
+.link--btn {
+	font-size: 1.25rem;
+	color: base.$dark-grayish-blue;
+	line-height: 1.3;
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus:focus-visible, &:hover {
+		outline: max(1px, 0.1em) dashed currentColor;
+		outline-offset: 0.25em;
+	}
+
+	
+}
+
+.hide__nav {
+	display: none;
+}
+
+.contact--btn {
+	background-color: base.$yellow;
+	padding: 1rem 2.2rem;
+	border-radius: 28px;
+	color: base.$black-text;
+
+	&:hover , &:focus {
+		background-color: color.scale(base.$yellow, $lightness: 60%);
+	}
+}
+
+@media screen and (min-width: 680px) {
+	.hide__nav {
+		display: flex;
+	}
+
+	.nav__list {
+		flex-direction: row;
+		position: relative;
+		padding: 0;
+		left: 0;
+		top: 0;
+		margin-left: 0;
+		background-color: transparent;
+		width: auto;
+
+		&::before {
+			content: none;
+		}
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.link--btn {
+		color: white;
+		text-decoration: none;
+	}
+	.contact--btn {
+		background-color: base.$white;
+		color: base.$black-text;
+		border: 1px solid transparent;
+
+		&:hover , &:focus {
+			color: base.$white;
+			//background-color: color.scale(base.$grayish-blue, $lightness: 75%);
+			background-color: hsla(0, 0%, 100%, 0.301);
+			//opacity: 0.5;
+			
+			//border: 1px solid black;
+		}
+
+	}
+
+	.nav {
+		padding: 2.125rem 2.5rem;
+		align-items: center;
+	}
+}
+
+@media screen and (min-width: 1180px) {
+	.header__link--btn img {
+		min-width: 10rem;
+	}
+}

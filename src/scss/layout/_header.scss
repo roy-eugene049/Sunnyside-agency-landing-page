@@ -1,0 +1,23 @@
+@use '../base';
+
+header {
+    position: relative;
+    // background-color: rgba(61,190,255,255);
+    color: base.$white;
+    background-image: url('../../images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    // background-size: cover;
+    width: 100%;
+    line-height: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+   // min-height: 100vh;
+}
+
+@media screen and (min-width: 680px) {
+    header {
+        background-size: 100% 100%;
+        background-image: url('../../images/desktop/image-header.jpg');
+    }
+    
+}

@@ -1,0 +1,14 @@
+@use '../base';
+.skip__to__content {
+	left: 50%;
+	position: absolute;
+	transform: translateY(-100%);
+	background-color: base.$soft-red;
+	height: 36px;
+	padding: 5px;
+	transition: transform 0.3s;
+    z-index: 10;
+	&:focus {
+		transform: translateY(0%);
+	}
+}

@@ -1,0 +1,12 @@
+@use './variables' as fonts;
+
+body {
+    font-family: fonts.$main-font;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+    font-family: fonts.$heading-font;
+    font-weight: 900;
+    line-height: 1;
+    color: fonts.$black-text;
+}

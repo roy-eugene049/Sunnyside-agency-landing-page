@@ -1,0 +1,8 @@
+@use './base';
+@use './layout';
+@use './component';
+
+.wrapper {
+    max-width: 1480px;
+    margin: auto;
+}

@@ -1,0 +1,44 @@
+@use '../base';
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem 2.5rem;
+	gap: 2rem;
+	max-width: 18.75rem;
+	width: 100%;
+}
+.footer__wrapper {
+    background-color: #90D4C6;
+	display: flex;
+	justify-content: center;
+}
+
+.footer__logo path {
+    fill: #2C7566;
+}
+.footer__nav, .socials {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	
+}
+.socials {
+	padding: 0 2.5rem;
+	
+}
+.footer__link--btn {
+	color: #458D7E;
+	text-decoration: none;
+	&:hover, &:focus {
+		color: base.$white;
+	}
+}
+
+.social__icon {
+	&:hover, &:focus {
+		filter: brightness(0) invert(1);
+	}
+}

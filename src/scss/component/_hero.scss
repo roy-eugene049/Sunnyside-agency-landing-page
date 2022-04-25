@@ -1,0 +1,61 @@
+@use '../base';
+@use 'sass:math';
+
+.hero {
+   
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-top: 69%;
+    
+}
+
+.arrow {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 5.5rem;
+    transition: all 1s ease-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.main__title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 6.25px;
+    color: base.$white;
+}
+
+.hero__content {
+    position: relative;
+    top: -13rem;
+}
+
+@media screen and (min-width: 680px) {
+    .hero {
+        padding-top: 54%;
+    }
+
+    .hero__content {
+        top: -22rem;
+    }
+}
+
+@media screen and (min-width: 1180px)  {
+    .hero {
+        padding-top: 34.5%;
+    }
+    .hero__content {
+        top: -26rem;
+    }
+    .main__title  {
+        font-size: 3.5rem;
+        letter-spacing: 8.75px;
+    }
+    .arrow {        
+        top: 6.5rem;
+    }
+}
